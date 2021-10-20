@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap');
+/* setting the box sizing attribute for the pages */
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+a, a:visited{
+  text-decoration: none;
+  color: #fff;
+}
+
+/* div {
+  resize: both;
+  overflow: auto;
+} */
+
+/* changing color when the link is hovered over */
+a:hover {
+  color: #7252ff;
+}
+
+.backgroundImage{
+  position: fixed;
+}
+
+.mainContainer {
+  background-color: #000;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+}
+
+.blackContainer {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuBar{
+  background-color: #000;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  color: #fff;
+  height: 150px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 50px;
+  padding-right: 5%;
+}
+
+.hero {
+  background-color: #000;
+  height: 750px;
+  padding-top: 50px;
+}
+
+.landingImage{
+  background-color: #000;
+  display: flex;
+  justify-content: end;
+  padding-right: 15%;
+  position: relative;
+}
+
+#sail {
+  width: auto;
+  height: 600px;
+  /* padding-top: 50px; */
+}
+
+.aquariusLogo {
+  display: flex;
+  justify-content: start;
+  position: absolute;
+  top: 250px;
+  left: 0px;
+}
+
+.cornerLogo {
+  /* background-color: #ff00ff; */
+  height: 100%;
+  width: 100%;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+#corner {
+  height: 50%;
+}
+
+#logo {
+  width: 65%;
+  height:auto;
+}
+
+.shortBio {
+  background-color: #000;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  height: 250px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.mainContainer .shortBio {
+  padding-bottom: 100px;
+}
+
+.submenu {
+  background-color: #fff;
+  height: 150px;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 10px;
+  color: #cccccc;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.mainContainer > .menuBar  a  h2, .blackContainer > .menuBar  a  h2 {
+  color: #fff;
+  font-weight: 400;
+}
+
+.mainContainer > .submenu  a:hover  h2, .blackContainer > .submenu  a:hover  h2 {
+  color: #7252ff;
+}
+
+.mainContainer > .menuBar  a:hover h2, .blackContainer > .menuBar  a:hover h2 {
+  color: #7252ff;
+}
+
+.mainContainer > .submenu a h2 {
+  color: #cccccc;
+  font-weight: 400;
+}
+
+.blackContainer > .submenu a h2 {
+  color: #fff;
+  font-weight: 400;
+}
+
+.blackContainer .submenu {
+  background-color: #000;
+}
+
+.galleryContainer  .menuBar {
+  background-color: #fff;
+}
+
+.galleryContainer > .menuBar  a  h2 {
+  color: #000;
+  font-weight: 400;
+}
+
+.galleryContainer > .menuBar  a:hover  h2 {
+  color: #7252ff;
+}
+
+.galleryContainer > .submenu h2 {
+  color: #cccccc;
+  font-weight: 400;
+}
+
+.galleryContainer > .submenu  a:hover  h2 {
+  color: #7252ff;
+}
+
+.mainContainer .activePage, .blackContainer .activePage, .galleryContainer .activePage {
+  border-bottom: 1px solid #7252ff;
+}
+
+.projectContainer {
+  /* background-color: #ddd; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.proj1 {
+  /* background-color: #ddd; */
+  position: relative;
+  display: flex;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.mainContainer .proj1 {
+  margin-top: 100px;
+}
+
+.mainContainer, .blackContainer .projectContainer {
+  padding-bottom: 200px;
+}
+
+.blackContainer .proj1 {
+  margin-top: 100px;
+}
+
+.galleryContainer .proj1 {
+  padding-bottom: 200px;
+}
+
+.videoSeries1 {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #fff;
+}
+
+.overlayText {
+  color: #000;
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 50px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.proj1:hover .overlay {
+  opacity: 70%;
+}
+
+.proj2 {
+  /* background-color: #ff00ff; */
+  position: relative;
+  margin-left: 150px;
+  width: 100%;
+}
+
+.series2 {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.proj2:hover .overlay {
+  opacity: 70%;
+}
+
+.proj3 {
+  /* background-color: #ff00ff; */
+  position: relative;
+  margin-right: 150px;
+  width: 100.125%;
+}
+
+.series3 {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.proj3:hover .overlay {
+  opacity: 70%;
+}
+
+.twoColumn {
+  /* background-color: #ff00ff; */
+  height: auto;
+  font-family: Montserrat;
+  display: flex;
+  gap: 30%;
+  padding-left: 15%;
+  padding-right: 15%;
+  align-items: center;
+}
+
+.leftCol > h1{
+  white-space: nowrap;
+}
+
+.galleryContainer .twoColumn h1 {
+  font-weight: 800;
+  color: #000;
+}
+
+.galleryContainer .twoColumn h3 {
+  font-weight: 500;
+  color: #cccccc;
+}
+
+.galleryContainer .twoColumn p {
+  font-weight: 400;
+  color: #000;
+}
+
+.blackContainer .twoColumn h1 {
+  font-weight: 800;
+  color: #fff;
+}
+
+.blackContainer .twoColumn h3 {
+  font-weight: 500;
+  color: #a1a1a1;
+}
+
+.blackContainer .twoColumn p {
+  font-weight: 400;
+  color: #fff;
+}
+
+.char1 {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 105%;
+}
+
+.char2 {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.char3 {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.threeColContainer, .oneColContainer {
+  /* background-color: #fff; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.galleryContainer .threeColContainer {
+  margin-bottom: 150px;
+}
+
+.threeColContainer {
+  margin-top: 100px;
+}
+
+.oneColContainer {
+  padding-bottom: 200px;
+}
+
+.galleryContainer .motionItem {
+  display: flex;
+  justify-content: center;
+}
+
+.galleryContainer .motionImg {
+  width: 50%;
+}
+
+.motionItem {
+  flex-basis: 100%;
+}
+
+.motionImg {
+  width: 100%;
+}
+
+.brandsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.brands {
+  width: 70%;
+}
+
+
+#endLine {
+  font-weight: 800;
+}
